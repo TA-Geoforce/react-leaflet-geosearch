@@ -6,7 +6,7 @@ import './react-leaflet-geosearch.css';
 
 class SearchControl extends MapControl{
   createLeafletElement(props) {
-    return new GeoSearchControl(props);
+    return GeoSearchControl(props);
   }
 
   componentDidMount() {

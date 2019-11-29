@@ -25,7 +25,7 @@ function (_MapControl) {
   var _proto = SearchControl.prototype;
 
   _proto.createLeafletElement = function createLeafletElement(props) {
-    return new _leafletGeosearch.GeoSearchControl(props);
+    return (0, _leafletGeosearch.GeoSearchControl)(props);
   };
 
   _proto.componentDidMount = function componentDidMount() {
