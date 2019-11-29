@@ -1,0 +1,116 @@
+{
+  "name": "react-leaflet-geosearch",
+  "version": "0.1.0",
+  "publishConfig": {
+    "tag": "latest"
+  },
+  "description": "Adds support for address lookup (a.k.a. geocoding / geoseaching) to React-Leaflet.",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:lib && npm run build:dist && npm run build:dev",
+    "build:umd": "cross-env NODE_ENV=development webpack",
+    "build:umd:min": "cross-env NODE_ENV=production webpack",
+    "build:dist": "webpack src/index.js --output dist/react-leaflet-geosearch.min.js",
+    "build:dev": "webpack src/index.js --mode development --output dist/react-leaflet-geosearch.js",
+    "build:lib": "npm run compile:lib",
+    "clean:lib": "rm -Rf ./lib",
+    "compile:lib": "babel src --out-dir lib",
+    "prepublishOnly": "npm run build",
+    "example": "webpack-dev-server --config ./example/webpack.config.js",
+    "lint": "eslint ./src",
+    "release:major": "npm version major && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:patch": "npm version patch && git push --follow-tags",
+    "publish": "npm publish",
+    "pretty": "prettier --write \"{src,example}/**/*.js\""
+  },
+  "files": [
+    "src",
+    "lib",
+    "dist",
+    "assets"
+  ],
+  "directories": {
+    "example": "example"
+  },
+  "keywords": [
+    "geolocation",
+    "geocoding",
+    "plugins",
+    "leaflet",
+    "geo",
+    "map",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TA-Geoforce/react-leaflet-geosearch.git"
+  },
+  "author": "T.A. Geoforce <info@tageoforce.com>",
+  "bugs": {
+    "url": "https://github.com/TA-Geoforce/react-leaflet-geosearch/issues"
+  },
+  "homepage": "https://github.com/TA-Geoforce/react-leaflet-geosearch#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/plugin-transform-proto-to-assign": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/plugin-transform-strict-mode": "^7.2.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.7.0",
+    "@babel/runtime": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-dev-expression": "^0.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "file-loader": "^4.2.0",
+    "flow-bin": "^0.109.0",
+    "flow-copy-source": "^2.0.8",
+    "flow-typed": "^2.6.1",
+    "html-webpack-plugin": "^3.2.0",
+    "leaflet": "^1.3.4",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "style-loader": "^1.0.0",
+    "warning": "^4.0.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "dependencies": {
+    "leaflet-geosearch": "^2.7.0",
+    "react-leaflet": "^2.5.0"
+  },
+  "peerDependencies": {
+    "leaflet": "^1.5.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  }
+}
