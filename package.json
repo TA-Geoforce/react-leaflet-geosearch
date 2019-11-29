@@ -1,6 +1,6 @@
 {
   "name": "react-leaflet-geosearch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publishConfig": {
     "tag": "latest"
   },
