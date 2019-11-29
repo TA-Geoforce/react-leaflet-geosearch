@@ -36,24 +36,20 @@ module.exports = {
 	mode: 'production',
 	module: {
 		rules: [
-			{
-				test: /\.(js|jsx)$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'babel-loader',
-                options: {
-                    presets: ["@babel/preset-env",
-					"@babel/preset-react"],
-                    plugins: ['transform-class-properties']
-                }
-			},
-			{
-				test: /\.css$/,
-				exclude: /node_modules/,
-				use: [
-					{ loader: 'style-loader' },
-					{ loader: 'css-loader' }
-				]
-			}
-		]
+            {
+                test: /\.(js|jsx)$/,
+				use: {
+					loader: "babel-loader",
+					options: {
+					  presets: ["@babel/preset-env"]
+					}
+				  },
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"]
+            }
+        ]
 	}
 };

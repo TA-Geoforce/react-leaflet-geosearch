@@ -1,10 +1,12 @@
-import { MapControl } from 'react-leaflet';
-import { GeoSearchControl as LeafletGeosearchControl } from 'leaflet-geosearch';
+import { withLeaflet, MapControl } from 'react-leaflet';
+import { GeoSearchControl } from 'leaflet-geosearch';
 import './react-leaflet-geosearch.css';
 
-export default class GeoSearchControl extends MapControl {
+
+
+class SearchControl extends MapControl{
   createLeafletElement(props) {
-    return new LeafletGeosearchControl(props);
+    return new GeoSearchControl(props);
   }
 
   componentDidMount() {
@@ -25,7 +27,7 @@ export default class GeoSearchControl extends MapControl {
   updateLeafletElement(fromProps, toProps) {
     const { map } = this.props.leaflet || this.context;
     this.leafletElement.remove();
-    this.leafletElement = new GeoSearchControl(toProps);
+    this.leafletElement = new SearchControl(toProps);
     this.leafletElement.addTo(map);
   }
 
@@ -34,3 +36,5 @@ export default class GeoSearchControl extends MapControl {
     eventHandler(event);
   }
 }
+
+export default withLeaflet(SearchControl);

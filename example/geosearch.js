@@ -1,6 +1,6 @@
 import React from 'react';
 import { Map, withLeaflet, TileLayer } from 'react-leaflet';
-import { GeoSearchControl, OpenStreetMapProvider } from '../dist/react-leaflet-geosearch.min'
+import { SearchControl, OpenStreetMapProvider } from '../lib/index'
 
 
 export default class GeoSearchExample extends React.Component {
@@ -11,7 +11,7 @@ export default class GeoSearchExample extends React.Component {
 
     render() {
         const prov = new OpenStreetMapProvider();
-        const GeoSearchControlElement = withLeaflet(GeoSearchControl);
+        const GeoSearchControlElement = withLeaflet(SearchControl);
         
         return (
             <Map center={[42.09618442380296, -71.5045166015625]} zoom={2} zoomControl={true}>

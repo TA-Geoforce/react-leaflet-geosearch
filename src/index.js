@@ -1,4 +1,4 @@
-export { default as GeoSearchControl } from './GeoSearchControl';
+export { default as SearchControl } from './GeoSearchControl';
 
 export { default as BingProvider } from './Providers/bingProvider';
 export { default as EsriProvider } from './Providers/esriProvider';
