@@ -33,7 +33,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
-      }
+    }
     ]
   },
   // this will create a development server to host our application

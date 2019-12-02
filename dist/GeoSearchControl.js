@@ -11,8 +11,6 @@ var _reactLeaflet = require("react-leaflet");
 
 var _leafletGeosearch = require("leaflet-geosearch");
 
-require("./react-leaflet-geosearch.css");
-
 var SearchControl =
 /*#__PURE__*/
 function (_MapControl) {
@@ -53,11 +51,6 @@ function (_MapControl) {
     this.leafletElement.remove();
     this.leafletElement = new SearchControl(toProps);
     this.leafletElement.addTo(map);
-  };
-
-  _proto._propagateEvent = function _propagateEvent(eventHandler, event) {
-    if (typeof eventHandler !== 'function') return;
-    eventHandler(event);
   };
 
   return SearchControl;

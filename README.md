@@ -10,9 +10,11 @@ The SearchControl is using the plugin from [leaflet-geosearch](https://github.co
 ```
 import { SearchControl, OpenStreetMapProvider } from 'react-leaflet-geosearch'
 
+//here you can add some styles
+import './example/react-leaflet-geosearch.css';
 
 ....
-
+const prov = OpenStreetMapProvider();
 const GeoSearchControlElement = withLeaflet(SearchControl);
 
  <Map center={[42.09618442380296, -71.5045166015625]} zoom={2} zoomControl={true}>

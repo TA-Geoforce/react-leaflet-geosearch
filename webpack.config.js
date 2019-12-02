@@ -12,26 +12,7 @@ module.exports = {
 	},
 	externals: {
 		debug: 'debug',
-		leaflet: {
-			commonjs: 'leaflet',
-			commonjs2: 'leaflet',
-			root: 'L'
-		},
-		'react-leaflet': {
-			commonjs: 'react-leaflet',
-			commonjs2: 'react-leaflet',
-			root: 'ReactLeaflet'
-		},
-		react: {
-			commonjs: 'react',
-			commonjs2: 'react',
-			root: 'React'
-    },
-		react: {
-			commonjs: 'leaflet-geosearch',
-			commonjs2: 'leaflet-geosearch',
-			root: 'ReactGeosearch'
-		}
+		
 	},
 	mode: 'production',
 	module: {

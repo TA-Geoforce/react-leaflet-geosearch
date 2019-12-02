@@ -1,6 +1,6 @@
 import { withLeaflet, MapControl } from 'react-leaflet';
 import { GeoSearchControl } from 'leaflet-geosearch';
-import './react-leaflet-geosearch.css';
+
 
 
 
@@ -29,11 +29,6 @@ class SearchControl extends MapControl{
     this.leafletElement.remove();
     this.leafletElement = new SearchControl(toProps);
     this.leafletElement.addTo(map);
-  }
-
-  _propagateEvent(eventHandler, event) {
-    if (typeof eventHandler !== 'function') return;
-    eventHandler(event);
   }
 }
 
