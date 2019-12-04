@@ -24,12 +24,7 @@ class SearchControl extends MapControl{
       });
   }
 
-  updateLeafletElement(fromProps, toProps) {
-    const { map } = this.props.leaflet || this.context;
-    this.leafletElement.remove();
-    this.leafletElement = new SearchControl(toProps);
-    this.leafletElement.addTo(map);
-  }
+
 }
 
 export default withLeaflet(SearchControl);
