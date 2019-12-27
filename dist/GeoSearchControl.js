@@ -5,48 +5,29 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.default = void 0;
 
-var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _react = require("react");
 
 var _reactLeaflet = require("react-leaflet");
 
 var _leafletGeosearch = require("leaflet-geosearch");
 
-var SearchControl =
-/*#__PURE__*/
-function (_MapControl) {
-  (0, _inheritsLoose2.default)(SearchControl, _MapControl);
+var SearchControl = function SearchControl(props) {
+  var _useLeaflet = (0, _reactLeaflet.useLeaflet)(),
+      map = _useLeaflet.map;
 
-  function SearchControl() {
-    return _MapControl.apply(this, arguments) || this;
-  }
+  (0, _react.useEffect)(function () {
+    var searchControl = new _leafletGeosearch.GeoSearchControl((0, _extends2.default)({
+      provider: props.provider
+    }, props));
+    map.addControl(searchControl);
+    return function () {
+      return map.removeControl(searchControl);
+    };
+  }, [props]);
+  return null;
+};
 
-  var _proto = SearchControl.prototype;
-
-  _proto.createLeafletElement = function createLeafletElement(props) {
-    return (0, _leafletGeosearch.GeoSearchControl)(props);
-  };
-
-  _proto.componentDidMount = function componentDidMount() {
-    var _this = this;
-
-    _MapControl.prototype.componentDidMount.call(this);
-
-    var _ref = this.props.leaflet || this.context,
-        map = _ref.map;
-
-    var _this$props = this.props,
-        onShowLocation = _this$props.onShowLocation,
-        onMarkerDragend = _this$props.onMarkerDragend;
-    map.on('geosearch/showlocation', function (e) {
-      _this._propagateEvent(onShowLocation, e);
-    }).on('geosearch/marker/dragend', function (e) {
-      _this._propagateEvent(onMarkerDragend, e);
-    });
-  };
-
-  return SearchControl;
-}(_reactLeaflet.MapControl);
-
-var _default = (0, _reactLeaflet.withLeaflet)(SearchControl);
-
+var _default = SearchControl;
 exports.default = _default;

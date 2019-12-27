@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-var path= require('path');
+var path = require("path");
 
 // this will create index.html file containing script
 // source in dist folder dynamically
@@ -11,11 +11,11 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports = {
   //specify the entry point for your project
-  entry : './example/index.js',
+  entry: "./example/index.js",
   // specify the output file name
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "index.js"
   },
   module: {
     // consists the transform configuration
@@ -33,7 +33,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
-    }
+      }
     ]
   },
   // this will create a development server to host our application

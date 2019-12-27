@@ -1,11 +1,9 @@
-import { EsriProvider  as LeafletEsriProvider  } from 'leaflet-geosearch';
+import { EsriProvider as LeafletEsriProvider } from 'leaflet-geosearch'
 
-const EsriProvider  = (key) => (
-    new LeafletEsriProvider({
-      params: {
-        key
-      },
-    })
-  );
-export default EsriProvider ;
-
+const EsriProvider = key =>
+  new LeafletEsriProvider({
+    params: {
+      key,
+    },
+  })
+export default EsriProvider

@@ -1,30 +1,20 @@
-import { withLeaflet, MapControl } from 'react-leaflet';
-import { GeoSearchControl } from 'leaflet-geosearch';
+import { useEffect } from 'react'
+import { useLeaflet } from 'react-leaflet'
+import { GeoSearchControl } from 'leaflet-geosearch'
 
+const SearchControl = (props) => {
+  const { map } = useLeaflet()
 
-
-
-class SearchControl extends MapControl{
-  createLeafletElement(props) {
-    return GeoSearchControl(props);
-  }
-
-  componentDidMount() {
-    super.componentDidMount();
-    const { map } = this.props.leaflet || this.context;
-    const {
-      onShowLocation,
-      onMarkerDragend,
-    } = this.props;
-    map.on('geosearch/showlocation', (e) => {
-      this._propagateEvent(onShowLocation, e);
+  useEffect(() => {
+    const searchControl = new GeoSearchControl({
+      provider: props.provider,
+      ...props,
     })
-      .on('geosearch/marker/dragend', (e) => {
-        this._propagateEvent(onMarkerDragend, e);
-      });
-  }
 
+    map.addControl(searchControl)
+    return () => map.removeControl(searchControl)
+  }, [props])
 
+  return null
 }
-
-export default withLeaflet(SearchControl);
+export default SearchControl
