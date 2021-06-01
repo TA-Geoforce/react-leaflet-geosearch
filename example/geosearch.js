@@ -1,7 +1,7 @@
 import React from "react";
 import { Map, TileLayer } from "react-leaflet";
 import { SearchControl, OpenStreetMapProvider } from "../dist/index";
-
+import './react-leaflet-geosearch.css';
 export default class GeoSearchExample extends React.Component {
   constructor() {
     super();
