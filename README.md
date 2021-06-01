@@ -1,6 +1,6 @@
 # react-leaflet-geosearch [![npm version](https://img.shields.io/npm/v/react-leaflet-geosearch.svg)](https://www.npmjs.com/package/react-leaflet-geosearch)![npm downloads](https://img.shields.io/npm/dw/react-leaflet-geosearch)
 
-Most recently tested with Leaflet React-Leaflet 3.0.5.
+Most recently tested with Leaflet React-Leaflet 2.5.0.
 
 React Leaflet geosearching/geocoding control build on top of [React-Leaflet](https://github.com/PaulLeCam/react-leaflet). 
 
