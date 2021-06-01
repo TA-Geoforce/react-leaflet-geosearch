@@ -25,13 +25,13 @@ export default class GeoSearchExample extends React.Component {
           provider={prov}
           showMarker={true}
           showPopup={false}
-          popupFormat={({ query, result }) => result.label}
           maxMarkers={3}
           retainZoomLevel={false}
           animateZoom={true}
           autoClose={false}
           searchLabel={"Enter address, please"}
           keepResult={true}
+          popupFormat={({ query, result }) => result.label}
         />
       </Map>
     );
