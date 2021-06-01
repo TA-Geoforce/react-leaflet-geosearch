@@ -6,14 +6,12 @@ React Leaflet geosearching/geocoding control build on top of [React-Leaflet](htt
 
 The SearchControl is using the plugin from [leaflet-geosearch](https://github.com/smeijer/leaflet-geosearch) 
 
+## Complete example with react-leaflet-geosearch
 
-# Installation
 To get started, to be able to run the example you have execute:
 ```bash
 npm install
 ```
-
-## Complete example with react-leaflet-geosearch
 
 ```jsx
 import React from "react";
