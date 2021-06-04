@@ -1,6 +1,7 @@
 import React from "react";
-import { Map, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import { SearchControl, OpenStreetMapProvider } from "../dist/index";
+import './react-leaflet-geosearch.css';
 
 export default class GeoSearchExample extends React.Component {
   constructor() {
@@ -12,7 +13,7 @@ export default class GeoSearchExample extends React.Component {
     const GeoSearchControlElement = SearchControl;
 
     return (
-      <Map
+      <MapContainer
         center={[42.09618442380296, -71.5045166015625]}
         zoom={2}
         zoomControl={true}
@@ -33,7 +34,7 @@ export default class GeoSearchExample extends React.Component {
           searchLabel={"Enter address, please"}
           keepResult={true}
         />
-      </Map>
+      </MapContainer>
     );
   }
 }
