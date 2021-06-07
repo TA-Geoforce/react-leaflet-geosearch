@@ -20,7 +20,7 @@ const props = {
     keepResult: true,
     popupFormat: {}
 }
-describe("Check if Google Layer renders", () => {
+describe("Check if GeoSearchControlElement renders", () => {
     it("Simple render of component", () => {
         const wrapper = mount(
             <MapContainer
