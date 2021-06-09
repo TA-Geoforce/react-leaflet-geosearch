@@ -1,4 +1,4 @@
-# react-leaflet-geosearch [![npm version](https://img.shields.io/npm/v/react-leaflet-geosearch.svg)](https://www.npmjs.com/package/react-leaflet-geosearch)![npm downloads](https://img.shields.io/npm/dw/react-leaflet-geosearch)
+# react-leaflet-geosearch [![npm version](https://img.shields.io/npm/v/react-leaflet-geosearch.svg)](https://www.npmjs.com/package/react-leaflet-geosearch)![npm downloads](https://img.shields.io/npm/dw/react-leaflet-geosearch)[![Node.js CI](https://github.com/TA-Geoforce/react-leaflet-geosearch/actions/workflows/node.js.yml/badge.svg)](https://github.com/TA-Geoforce/react-leaflet-geosearch/actions/workflows/node.js.yml)
 
 Most recently tested with Leaflet React-Leaflet 2.5.0.
 
