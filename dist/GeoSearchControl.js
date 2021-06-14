@@ -14,7 +14,9 @@ var _reactLeaflet = require("react-leaflet");
 var _leafletGeosearch = require("leaflet-geosearch");
 
 var SearchControl = function SearchControl(props) {
-  var map = _reactLeaflet.useMap();
+  var _useMap = (0, _reactLeaflet.useMap)(),
+      map = _useMap.map;
+
   (0, _react.useEffect)(function () {
     var searchControl = new _leafletGeosearch.GeoSearchControl((0, _extends2.default)({
       provider: props.provider
