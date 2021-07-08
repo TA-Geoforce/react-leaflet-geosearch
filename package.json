@@ -5,7 +5,7 @@
     "tag": "latest"
   },
   "description": "Adds support for address lookup (a.k.a. geocoding / geoseaching) to React-Leaflet.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "build": "npm run build:lib && npm run build:dist && npm run build:dev",
@@ -19,7 +19,7 @@
     "prepublishOnly": "npm run build",
     "example": "webpack-dev-server --config ./example/webpack.config.js",
     "lint": "eslint ./src",
-    "pretty": "prettier --write \"{src,example}/**/*.js\"",
+    "pretty": "prettier --write \"{src,example}/**/*.js\""
   },
   "files": [
     "src",
