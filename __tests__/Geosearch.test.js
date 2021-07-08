@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapContainer, TileLayer } from "react-leaflet";
-import { SearchControl } from "../dist/index";
+import { SearchControl } from "../src/index";
 import { mount } from "enzyme"
 import Enzyme from "enzyme"
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17"
