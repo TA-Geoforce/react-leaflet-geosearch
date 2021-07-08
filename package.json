@@ -16,11 +16,10 @@
     "build:lib": "npm run compile:lib",
     "clean:lib": "rm -Rf ./lib",
     "compile:lib": "babel src --out-dir lib",
-    "prepublishOnly": "npm run transpile",
+    "prepublishOnly": "npm run build",
     "example": "webpack-dev-server --config ./example/webpack.config.js",
     "lint": "eslint ./src",
     "pretty": "prettier --write \"{src,example}/**/*.js\"",
-    "transpile": "babel src -d dist --copy-files"
   },
   "files": [
     "src",
