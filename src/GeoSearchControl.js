@@ -3,7 +3,7 @@ import { useMap } from 'react-leaflet'
 import { GeoSearchControl } from 'leaflet-geosearch'
 
 const SearchControl = (props) => {
-  const { map } = useMap()
+  const map = useMap()
 
   useEffect(() => {
     const searchControl = new GeoSearchControl({
